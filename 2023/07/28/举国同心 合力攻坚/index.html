@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 举国同心 合力攻坚</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>举国同心 合力攻坚 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/28
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                经济
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/经济" style=color:#ff7d73>
+                    经济
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="/img/2/%E5%9B%BE%E7%89%8728.jpg"><br>66个贫困县全部脱贫摘帽，923万贫困人口全部脱贫，192万人搬出大山，减贫人数、易地扶贫搬迁人数均为全国之最——党的十八大以来，在以习近平同志为核心的党中央坚强领导下，贵州作为全国脱贫攻坚战主战场之一，集中各方力量啃下了一个个硬骨头，攻下一个个深贫堡垒，让这里实现了“千年之变”。<br> <span id="more"></span><br>习近平总书记指出“我们在脱贫攻坚领域取得了前所未有的成就，彰显了中国共产党领导和我国社会主义制度的政治优势”。<br>武陵山区、乌蒙山区、滇桂黔石漠化区……记者行走在昔日的集中连片特困地区，亲眼所见贵州大地旧貌换新颜，处处呈现山乡巨变、山河锦绣的时代画卷，充分彰显了习近平新时代中国特色社会主义思想的真理力量和中国特色社会主义制度的独特优势。</p>
+<h1 id="923万贫困人口脱贫：坚持党的领导为脱贫攻坚提供坚强政治和组织保障"><a href="#923万贫困人口脱贫：坚持党的领导为脱贫攻坚提供坚强政治和组织保障" class="headerlink" title="923万贫困人口脱贫：坚持党的领导为脱贫攻坚提供坚强政治和组织保障"></a>923万贫困人口脱贫：坚持党的领导为脱贫攻坚提供坚强政治和组织保障</h1><p><img src="/img/2/%E5%9B%BE%E7%89%8729.jpg"><br>贵州省台江县老屯乡长滩村，地里一派丰收景象。在收稻谷前的间隙，苗族绣娘姜引娣正忙着在家里赶制一批刺绣手工艺品，“我卖刺绣的钱，基本上可以够家里一年的开支了。”刚刚过去的暑假，长滩村旅游逐步恢复，村里的刺绣馆接待了数十个研学团队。游客的到来，让不少像姜引娣一样的苗寨妇女可以“背着娃娃绣着花，养活自己照顾家”。而就在2年前，台江县还是贫困县，贫困发生率曾高达37.71%。如今，台江县不仅脱了贫，还走出乡村振兴的新路子。这背后是几任驻村第一书记的接力。<br>翻开中组部派驻干部王小权的扶贫日志，他谋划的发展思路清晰可见：“生态环境和民族文化是长滩村发展文化旅游为群众增收致富的宝贵资源……”然而，因为2019年的一场车祸，他倒在了扶贫路上，生命永远定格在45岁。在没有硝烟的战场上，一个战士倒下去，另一个战士冲上来。如今，扶贫日志中的设想一一变成现实，长滩村在2020年入选全国乡村旅游重点村。<br><img src="/img/2/%E5%9B%BE%E7%89%8730.jpg"><br>“接下来，我们的目标是把长滩村打造成苗族文化旅游目的地。”去年接任的驻村第一书记周兴文说，脱贫不是终点，我们要带着乡亲们向更好的生活奋斗。贵州在明朝就被称为“天下第一贫瘠之地”；清乾隆年间，贵州“岁赋所入不敌内地一大县”；直到新中国成立之前，贵州大多数农村人口处于绝对贫困状态。<br>党的十八大以来，贵州累计选派了21.32万名干部到村开展帮扶，瞄准最短的短板发力，群众出行难、用电难、上学难、看病难、通信难等长期没有解决的老大难问题普遍解决。2020年11月23日，贵州省宣布剩余的9个贫困县退出贫困县序列。至此，我国832个贫困县全部脱贫。如今，贵州同全国人民一道迈入小康社会，923万贫困人口全部脱贫。<br>贵州是我国打赢脱贫攻坚战的一个缩影。放眼全国，8年时间，9899万农村贫困人口脱贫，创造了彪炳史册的人间奇迹。这背后是党的十八大以来，中国共产党领导的中国特色社会主义制度下构建的大扶贫格局。<br>——22个省区市向党中央立下“军令状”。各地建立起脱贫攻坚党政一把手负责制，层层签订脱贫攻坚责任书，层层压实责任，层层传导压力，形成了省市县乡村“五级书记抓扶贫”的工作格局；<br>——中央明确脱贫攻坚期内贫困县县级党政正职要保持稳定，各地发挥好村党组织在脱贫攻坚中的战斗堡垒作用。<br>——强化中央统筹、省负总责、市县抓落实的管理机制，推动脱贫攻坚各项政策措施落地生根。<br>……<br>中国特色减贫道路为全球减贫贡献了中国智慧和中国方案，坚定了全球减贫信心。巩固脱贫攻坚成果，接续推进乡村振兴，更需要一代又一代人的奋斗。截至今年上半年，全国18.6万名驻村第一书记、56.3万名工作队员全部选派到位，新老交接有序推进。</p>
+<h1 id="192万人搬出大山：坚持精准扶贫方略啃下脱贫硬骨头"><a href="#192万人搬出大山：坚持精准扶贫方略啃下脱贫硬骨头" class="headerlink" title="192万人搬出大山：坚持精准扶贫方略啃下脱贫硬骨头"></a>192万人搬出大山：坚持精准扶贫方略啃下脱贫硬骨头</h1><p><img src="/img/2/%E5%9B%BE%E7%89%8731.jpg"><br>搬得出，还要稳得住、能致富。在响塘龙社区的就业帮扶车间，保洁、月嫂、烹饪等“订单式”就业技能培训确保一户一就业，农民正向市民转变。像这样的就业帮扶车间，在贵州有近千个。为彻底拔穷根，2015年11月，中央扶贫开发工作会议提出“易地搬迁脱贫一批”，吹响新一轮易地扶贫搬迁的冲锋号。<br><img src="/img/2/%E5%9B%BE%E7%89%8732.jpg"><br>同年12月，贵州启动这一工作。192万人占全国易地扶贫搬迁人口总数的近五分之一，任务异常艰巨。“十三五”期间，贵州累计建成949个集中安置点，住房46.5万套，整体搬迁贫困自然村寨1万多个。“搬下山，住新房，党让我们把祖祖辈辈的梦变成了真实的生活。”贵州省册亨县搬迁户罗元高家里客厅挂着老屋的照片，新旧对比十分强烈。搬迁60多公里，生活改天换地。脱贫攻坚期间，960多万贫困人口通过易地扶贫搬迁彻底告别贫穷，搬迁人口数量相当于一个中等人口国家。<br>“这在世界上只有我们党和国家能够做到，充分彰显了我们的政治优势和制度优势。”习近平总书记指出。一口刀村的变迁，是精准扶贫方略的生动实践。我国通过扶持对象精准、措施到户精准等“六个精准”，确保脱贫路上不落一人。这是史无前例的精准到人，明确“帮扶谁”：8年时间，近2000万人次进村入户，开展贫困人口动态管理和信息采集工作，按照“两不愁三保障”标准精准定位帮扶对象。这是举世罕见的精准组织，明确“谁来帮”：25万多个驻村工作队，300多万名县级以上单位派出的驻村干部，做到户户有责任人，村村有帮扶队。这是实事求是的精准施策，明确“怎么帮”：根据不同致贫原因实施“六个精准”“五个一批”，因地制宜、因人施策。这是审慎科学的精准评估，明确“如何退”：明确“时间表”，引入第三方，聚焦内生力和发展力……创新构建最严格考核评估体系，确保脱贫成果经得起历史检验。<br>“精准扶贫是我国打赢脱贫攻坚战的基本方略，是彰显我国政治制度优势的重要方面。”国家乡村振兴局中国扶贫发展中心主任黄承伟说。</p>
+<h1 id="天堑变通途：集中力量办大事补上发展短板"><a href="#天堑变通途：集中力量办大事补上发展短板" class="headerlink" title="天堑变通途：集中力量办大事补上发展短板"></a>天堑变通途：集中力量办大事补上发展短板</h1><p><img src="/img/2/%E5%9B%BE%E7%89%8733.jpg"><br>从高空俯瞰，贵州麻山地区的麻怀村宛如一条鱼，“鱼头”的位置，是一条隧道。驱车通过这条长216米、宽4米、高5米的隧道，只需短短30多秒，但却凝聚着当地村民15年的艰辛努力。生活在群山包围之中的村民，数百年来深受交通不便之苦。<br>“小孩八九岁才能上学，走路来回6个小时；老人生病、孕妇难产要抬到大路边候车；果子熟了烂在岩缝里；村民建房，物资全靠肩挑背驮……”在村里的陈列馆中，记者找到许多对往日的描述。<br>为打通出山路，从1999年冬天开始，被称为当代“女愚公”的邓迎香和乡亲们一起开山凿洞。经过十余年的艰苦努力，2014年，一条隧道终于建成。有了这条出山路，整个村子面貌发生了翻天覆地的变化。荷塘、凉亭、步道，一处处乡村旅游设施逐渐完善。距村委会不远的食用菌基地，数十名工人在大棚内忙着采摘新鲜的菌子。从秦朝开五尺道，到元朝修建驿道，再到明朝形成五条通往外省的主要驿道，历经千年，群山阻隔的贵州长期处于“孤岛”状态。<br>行路难，曾是制约贵州脱贫的最大短板。这是一条挂在崖壁上的“天路”：路边的山崖如斧劈刀削。俯身向下看，令人双腿发抖。这条路位于贵州省道真仡佬族苗族自治县，连接忠信镇到石笋村，全长5.6公里、宽4.5米。谈及修路的艰辛，时任村主任费建刚记忆犹新。当时挖掘机现场作业十分艰难，两三天才能掘进一米，既要担心上方滚石，又怕脚下石块松动。<br>“苦了几辈人，盼了几十年！”村民杨世进说。昔日“地无三尺平”的贵州，实现了从“千沟万壑”到“高速平原”的重大跨越。脚下的路通了，发展的思路也打通了。贵州农业产业的规模、产量、产值显著提升，蔬菜、食用菌、茶叶等12个农业特色优势产业蓬勃发展。如今，贵州田间地头的农产品装上车就能发往各地，销售半径从平均不到300公里，延伸至东部沿海地区及国际市场。<br>截至2020年底，全国贫困地区新改建公路110万公里、新增铁路里程3.5万公里，贫困地区具备条件的乡镇和建制村全部通硬化路、通客车、通邮路，贫困地区因路而兴、因路而富。党的十八大以来，全国把基础设施建设作为脱贫攻坚基础工程，集中力量，加大投入，全力推进，补齐了贫困地区基础设施短板，推动了贫困地区经济社会快速发展。<br>这是一场在中国共产党领导下，发挥全国一盘棋的制度优势，举全国之力打赢的脱贫攻坚战：实施东西部扶贫协作，东部9个省、14个市结对帮扶中西部14个省区市，全国支援西藏和新疆，东部343个经济较发达县市区与中西部573个贫困县开展携手奔小康行动；开展定点扶贫，307家中央单位定点帮扶592个贫困县；2012年到2020年，各级财政专项扶贫资金累计投入1.6万亿元，扶贫再贷款累计发放6688亿元……“从政治基础看，精准扶贫必须坚持中国共产党的领导和发挥社会主义制度集中力量办大事的优势。”黄承伟说。<br>站在新的历史起点，在以习近平同志为核心的党中央的坚强领导下，全国上下发挥中国特色社会主义制度的显著优势，集中力量办大事，一张蓝图绘到底，一代接着一代干，踔厉奋发，勇毅笃行，在乡村振兴之路上大踏步向前。</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 贵州：红色基因代代传 牢记嘱托开新篇</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>贵州：红色基因代代传 牢记嘱托开新篇 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/27
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/红色足迹">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                红色足迹
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/红色足迹" style=color:#879cff>
+                    红色足迹
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>“好花红啊好花红，哪朵向阳哪朵红！”这首布依族民歌《好花红》，唱响在原生态山水与大数据产业交相辉映、融合共美的多彩贵州。<br>　　“贵州取得的成绩，是党的十八大以来党和国家事业大踏步前进的一个缩影。”2017年，习近平总书记参加党的十九大贵州省代表团讨论，总书记的关怀如暖流般滋润着贵州大地。<br>  <span id="more"></span><br>　　2020年彻底摆脱贫困、实现千年梦想的贵州人民正坚定不移沿着总书记指引的方向，坚持以高质量发展统揽全局，守好发展和生态两条底线，在新时代西部大开发上闯新路，在乡村振兴上开新局，在实施数字经济战略上抢新机，努力开创百姓富、生态美的多彩贵州新未来，续写贵州新时代长征路上高质量发展的精彩篇章。</p>
+<h1 id="英雄辈出之处，革命福地圣地"><a href="#英雄辈出之处，革命福地圣地" class="headerlink" title="英雄辈出之处，革命福地圣地"></a>英雄辈出之处，革命福地圣地</h1><p>五月的乌江，水碧山青。娄山关上高大的柳杉树，赤水河古老的渡口，讲述着红军辉煌的战绩。<br>　　曾经的“秘境”贵州由于山水阻隔，长期被视为“化外夷方”。先是土司，后有军阀，贵州各族人民饱受压迫和奴役，而反抗压迫和奴役的斗争也铸就了贵州人民英勇的品格和不屈的血性。<br>　　邓恩铭，参加中共一大的唯一一位少数民族代表，出生在贵州省黔南布依族苗族自治州荔波县的一个水族家庭。亲历了晚晴封建统治者对边远少数民族的残酷剥削和欺压，邓恩铭从小立志救国救民，16岁便写下豪迈诗句：“男儿立志出乡关，学业不成誓不还。埋骨何须桑梓地，人间到处是青山。”<br>　　20世纪20年代，马克思主义的星火在贵州这片土地上开始传播，周逸群等从日本归国的贵州籍青年创办了《贵州青年》等进步杂志。1924年，周逸群加入中国共产党，后成长为红军的杰出将领。<br>　　大革命失败后，作为军阀和国民党反动派统治薄弱的地带，赤色浪潮涌动在贵州高原，中国共产党先后在黔北、黔西南、黔西北建立了革命组织。1934年5月至7月间，贺龙等人率领红三军进入黔东，开辟包括贵州的沿河、印江、德江、松桃在内的黔东特区根据地。<br>　　1935年1月15日，长征中召开的遵义会议成为中国革命转危为安的伟大转折点。那一刻不仅改变了中国历史，也让贵州不再沉寂于西南一隅。<br>　　据记载：“遵义会议一共开了3天，气氛紧张激烈，发言的声音很高，每天总是开到半夜才休会。”毛泽东无可辩驳且铿锵有力的发言赢得了热烈拥护。遵义会议的总决议，总结了失败教训，通过了增选毛泽东为政治局常委。中国革命从此有了真正的领袖和灵魂。<br>　　“一个国家、一个政党，领导核心至关重要。”党的十九大上，习近平新时代中国特色社会主义思想被确立为党的行动指南——这是历史的回响，是宗旨的传承，是现实的呼唤，是人民的期盼。<br><img src="/img/2/%E5%9B%BE%E7%89%8726.jpg"><br><img src="/img/2/%E5%9B%BE%E7%89%8727.jpg"></p>
+<h1 id="传承红色基因，打赢脱贫攻坚战"><a href="#传承红色基因，打赢脱贫攻坚战" class="headerlink" title="传承红色基因，打赢脱贫攻坚战"></a>传承红色基因，打赢脱贫攻坚战</h1><p>“我们要运用好遵义会议历史经验，让遵义会议精神永放光芒。”2015年6月，习近平总书记来到遵义调研时这样强调。<br>　　红色贵州在历史上有过辉煌，然而这个全国唯一没有平原支撑的省份，由于生态破坏严重、缺少产业支撑，即使有一代一代人的努力依然无法摆脱贫困。党的十八大召开前夕，贵州常住人口流失近600万；农村贫困人口达到惊人的1521万，为全国之最；省会贵阳综合排名在全国城市中仅为90名；全省人均可支配收入居全国倒数第二。<br>　　“好日子是干出来的，贫困并不可怕，只要有信心、有决心，就没有克服不了的困难。”牢记嘱托，贵州人立下雄心要彻底撕掉贫困落后的标签。<br>　　“要想富，先修路！”因为路不通，优质产品运不出去，原料成本降不下来，贵州吃够了交通闭塞的亏。要脱贫，必须打破这一瓶颈。党的十八大以来，贵州以“修路”破题，创新投融资方式，让交通建设在打赢脱贫攻坚战中发挥了巨大作用。<br>　　在贵州南部的麻山深处，罗甸县沫阳镇麻怀村党支部书记邓迎香带领村民肩挑背驮、开山凿石,开出一条长216米、高4米、宽5米的隧道,将两个多小时的崎岖山路缩短为15分钟的便捷通道。她说:“我就是用手挖、用牙啃,也要啃穿一条路!”<br>　　回望10年前的目标，贵州人几乎不敢相信今天自己的“家当”：西部省区中第一个实现县县通高速；高速公路通车里程突破7607公里,居全国第四；高铁通车里程突破1500公里；实现了市市通高铁、县县通高速、村村通水泥路。如今，路不再是贵州人的痛，而是贵州人的自信和底气。<br>　　路通了，人也回来了。据统计，从2012年起，贵州常住人口开始回流，且呈现逐年加速增长态势，2020年达到3856万人口，比10年前增加了近400万，人口结构也更为优化。与此同时，贵州GDP增速也连续10年保持全国前列。<br>　　农村缺乏致富产业曾经是贵州长期面临的难题。在决战脱贫攻坚中，贵州人发扬苦干实干的精神，抓住产业富民的关键，大力发展新型高效山地绿色农业，2019年农业产值增长速度全国第一。2020年，农村居民收入增速居全国第三位。<br>　　农村产业的大发展吸引了大量农民返乡创业，很多久已沉寂的村寨又恢复了往日生机。截至2020年底，贵州累计有192万贫困群众实现了易地扶贫搬迁，是全国易地扶贫搬迁人口最多的省份。<br>　　2020年11月，最后9个深度贫困县摘帽出列，贵州彻底撕掉了贫困落后的标签，GDP总量从2012年的全国第26位提升到第20位，人均地区生产总值从第31位上升到第25位，省会贵阳在全国百强城市排行榜中位列37位，比10年前提升了53个位次。</p>
+<h1 id="牢记殷殷嘱托，汇聚科教力量"><a href="#牢记殷殷嘱托，汇聚科教力量" class="headerlink" title="牢记殷殷嘱托，汇聚科教力量"></a>牢记殷殷嘱托，汇聚科教力量</h1><p>　5月17日一大早，贵州省黔西南州贞丰县龙河村的乡村医生、党的十九大代表钟晶就出诊了，给村里零到六岁的孩子们免费接种乙肝、卡介苗、麻风等疫苗。钟晶说：“我们现在与村里每家每户都签了健康协议，无论老人孩子，都要掌握他们的身体状况。”龙河村一共有700多户人家、3000多人口，家庭医生签约服务做到了全覆盖，定期回访体检，钟晶一户都不落下。<br>　　2017年10月19日，习近平总书记在参加党的十九大贵州省代表团讨论时，向钟晶详细询问农民一年交多少医疗保险费、贫困乡村老百姓生产生活条件有没有改善。钟晶答，我们贵州近30万乡村医生，都坚守在大山里的村村寨寨，确保每个乡镇有一座卫生院，每个行政村有一所卫生室，而且在全国率先建成省市县乡四级远程医疗网，筑牢了农村群众的健康基础。<br>　　“希望贵州的同志全面贯彻落实党的十九大精神，大力培育和弘扬团结奋进、拼搏创新、苦干实干、后发赶超的精神，守好发展和生态两条底线，创新发展思路，发挥后发优势，决战脱贫攻坚，决胜同步小康，续写新时代贵州发展新篇章，开创百姓富、生态美的多彩贵州新未来。”总书记的话语，为贵州擘画了美好未来。<br>　　张建，一位来自贵州农村的90后青年，2017年植保专业硕士毕业后如愿考取公务员。可当他走到脱贫攻坚一线，发现农民的所需、所急、所盼正是自己丢掉的专业，责任感驱使他重新返回贵州大学。2019年他成为绿色新型农药研究方向的博士生。<br>　　“无论是提高植物免疫力的农药，还是杀虫剂，国外品牌都占据市场，我下决心要研制出群众用得起的好农药。”作为中国工程院院士宋宝安的弟子，张建正紧盯农药领域的“卡脖子”技术，已经开始与国内数家农药企业合作攻关，取得了多项成果。与此同时，作为贵州大学“博士村长”计划的一员，他还深入到田间地头，手把手教农民如何选用农药，合理使用农药，增产效果显著。<br>　　贵州大学农学院副院长潘学军介绍，他们深入实施“博士村长”计划，组建以博士研究生、硕士研究生为主、本科生参与的“博士村长”实践队，深入乡村、企业、学校和社区，实行科技服务、人才支持等行动，积极支持巩固脱贫攻坚成果和服务乡村振兴。<br>　　2015年6月，习近平总书记考察了贵州省机械工业学校，了解了贵州省教育“9+3”计划实施情况、清镇职教城规划建设和教育扶贫情况，肯定他们重点招收贫困学生入学，通过技术培训、学历教育、职业指导、校企合作等方式支持农村脱贫的实践。<br>　　贵州省教育厅厅长邹联克说，我们牢记总书记嘱托，充分发挥职业教育在脱贫攻坚中的积极作用。近两年，贵州全省中高职毕业生省内就业率由10年前的30%上升到70%，为贵州经济增速持续8年位列全国前列提供了技术技能人才保障；实现全省120万农村建档立卡贫困户“1户1人1技能”全覆盖，五年来累计有近10万名贫困家庭的中高职学生顺利就业。<br>　　同时，贵州紧扣“高质量打好脱贫攻坚教育保障硬仗”工作目标，派出102支队伍200多名干部，深入全省各地4059所学校、1245个乡镇、2714个村、6662户建档立卡家庭，扎实抓好中小学开学前、开学时、考核时学生到校就读排查劝返工作，全省义务教育适龄阶段辍学学生实现常态化动态清零。全省平均每年投入20亿元以上资金健全精准资助体系，做到不因贫失学、不因学返贫，在西部率先实现县域义务教育基本均衡发展。</p>
+<h1 id="实施大数据战略，抢抓发展新机"><a href="#实施大数据战略，抢抓发展新机" class="headerlink" title="实施大数据战略，抢抓发展新机"></a>实施大数据战略，抢抓发展新机</h1><p>今年5月，贵州航天云网科技发展有限责任公司成功完成了26.32亿元的新一轮融资，创下国内“工业互联网+”领域单笔融资额最高纪录。“我们的‘工业云’平台已经为全国很多企业进行数字化赋能。以前这在贵州是不可想象的。”贵州航天云网科技有限公司副总经理文杰说。<br>　　近年来，贵州实施的大数据战略，不仅找到了产业的蓝海，而且一跃而起，拥有了发展的新名片。<br>　　“面对信息化潮流，只有积极抢占制高点，才能赢得发展先机。”习近平总书记为贵州发展大数据产业指明了方向。<br>　　大数据战略实施以来，贵阳连续举办国际大数据博览会、引进多家知名企业、聚集多个数据产业，华为软件开发云平台、苹果中国数据中心、阿里巴巴大数据创新产业技术发展中心等纷纷落地贵阳，贵阳也由此荣获“中国数谷”“大数据之都”的美誉。<br>　　在“大数据高科技工厂”里，大数据与实体经济深度融合，区块链、人工智能正加快布局，朗玛信息、高新翼云、茅台云商等高新企业落地扎根，带动区域实力不断增强。<br>　　贵阳国家高新技术产业开发区管委会副主任高升介绍，根据科技部火炬高技术产业开发中心发布的数据，2020年度全国169个国家级高新区评选中，贵阳高新区综合排名上升至全国第42位，较去年上升了8位。目前，高新区聚集了数十万青年知识分子，“贵漂”成为一种时尚，他们正在成为“新贵阳人”。<br>　　“要着眼于形成新发展格局，推动大数据和实体经济深度融合，培育壮大战略性新兴产业，加快发展现代产业体系。”今年2月，习近平总书记的高瞻远瞩为贵州大数据产业发展注入了强大动力。<br>　　3月31日起，位于贵州省平塘县的“中国天眼”——FAST射电望远镜正式向世界各国科学家开放。位于贵州贵安新区的FAST数据中心是“中国天眼”的神经中枢，预计未来10年，FAST射电望远镜数据中心数据存储将达到100PB，计算能力将达到1000Tflops。<br>　　作为西部大数据产业的高地，云上贵州、满帮等一批大数据平台迅猛发展，传统煤炭工业机械化、智能化水平大幅度提高，千企引进、千企改造方兴未艾，农村电子商务有力助推山区农民脱贫致富，省、市、县、乡远程医疗有效缓解山区群众看病难，“一云一网一平台”大大提升了政府办事效力。<br>　　从“风生水起”到“落地生根”再到“集聚成势”，贵州的大数据产业发展实现了精彩的“三级跳”。</p>
+<h1 id="永葆生态底色，文化产业富民"><a href="#永葆生态底色，文化产业富民" class="headerlink" title="永葆生态底色，文化产业富民"></a>永葆生态底色，文化产业富民</h1><p>“10年前，乌江曾被群众戏称为‘污江’，作为环保人，我们都心里急啊。”贵州省环境监测中心站站长涂志江说，作为贵州人的母亲河，由于煤矿、磷矿等工业排放，加上流域内大量网箱养殖，乌江8个观测点的监测断面指标都严重超标。<br>　　“要牢固树立绿水青山就是金山银山的理念，守住发展和生态两条底线，努力走出一条生态优先、绿色发展的新路子。”从春节后第一天全民上山植树造林，到乌江干支流网箱网全部拆除；从全流域大数据精准监测，再到磷矿企业以渣定产，作为全国生态文明示范区的贵州像爱护眼睛一样保护生态，10年间生态环境面貌发生了根本转变。<br>　　“今年2月，我在乌江化屋码头向总书记汇报水质监测结果时，已经可以自豪地说，乌江的每个监控断面都达到了二类水标准，真正实现了‘一江清水入长江’。”涂志江介绍，目前贵州主要河流出境断面水质优良率100%。不仅水质好，森林覆盖率也达到61.51%，县级以上城市空气质量优良天数比率达99.4%。<br>　　优良生态环境是贵州最大的发展优势和竞争优势。贵州作为首批国家生态文明试验区，30项改革成果列入国家推广清单，生态文明贵阳国际论坛成为传播习近平生态文明思想的重要平台。被称为“山地公园省”的贵州正在变成近悦远来的宜居家园、旅游乐园、乡愁故园。<br>　　“民族的就是世界的。特色苗绣既传统又时尚，既是文化又是产业，不仅能够弘扬传统文化，而且能够推动乡村振兴，要把包括苗绣在内的民族传统文化传承好、发展好。”今年2月，习近平总书记来到贵州省毕节市的化屋村，为乡亲们留下殷殷嘱托。<br>　　近年来，贵州涌现出一批少数民族非遗创业者，他们组织群众参与非遗产品设计、销售、经营，探索非遗和旅游结合路子，取得了积极成效，为乡村振兴打下了坚实基础。<br>　　丹寨县扬武镇排倒村的杨芳，是国家级非遗“苗族蜡染”的传承人。多年前，她在丹寨创办了蜡染专业合作社，覆盖了6个村寨，是带领当地苗族妇女致富的“领头雁”。在她的400多名社员中，涌现出了一大批蜡染名匠，由她创作的作品，更是享誉国内外。<br>　　苗绣国家级非遗传承人龙禄颖是贵州松桃舞水云台旅游商品开发公司董事长，2008年12月她组建了松桃苗绣团队，如今已经从最初的3人发展到4000多名从业者，留守妇女和返乡农民工熟练地掌握了技能，绣品卖到了全国各地甚至海外市场。<br>龙禄颖说：“群众富了，头脑活了，能力强了，眼里的机会也多了。我们要用自己的勤劳苦干实现价值，把苗绣这一指尖上的技艺变成指尖经济，形成富民强省的产业。”</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

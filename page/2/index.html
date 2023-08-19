@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 发现无限可能</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    <div id="home-head" style=background-image:url('home.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>黔贵青林</h1>
+                <h3>发现无限可能</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+
+<div class="post">
+
+    <a href="/2023/07/26/贵阳先贤谢六逸/">
+        <h2>
+            贵阳先贤谢六逸
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色人物
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>谢六逸（1898－1945），中国现代新闻教育事业的奠基者之一。著名的作家、翻译家、教授。号光燊，字六逸，笔名宏徒、鲁愚。1898年8月12日出生于贵阳的一个仕宦之家。1917年以官费生赴日就读于早稻田大学。1922年毕业归国，入商务印书馆工作。后历任神州女校教务主任及暨南、复旦、大夏大学教授<br><img src="/img/2/4.jpg"><br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/人物" style=color:#ffa2c4>
+                人物
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/贵阳先贤谢六逸/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/26/彝族国民革命军陆军上将：安健/">
+        <h2>
+            彝族国民革命军陆军上将：安健
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色人物
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>安健(1877—1929年)字舜卿，彝族，去世后被南京政府追赠为国民革命军陆军上将。贵州六枝特区上官人，出生在一个彝族土司家庭，是杰出女政治家奢香夫人的后人，清末附生(秀才)。少年时就学安顺府，后游学省城贵阳。受民主革命思想影响，光绪31年(1905年)抛弃科举仕途，东渡日本留学，同年在东京首批加入中国同盟会。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/人物" style=color:#879cff>
+                人物
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/彝族国民革命军陆军上将：安健/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/26/林青：愿将满腔热血 换来幸福人间/">
+        <h2>
+            林青：愿将满腔热血 换来幸福人间
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色人物
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p> 在贵州省贵阳市环城北路一处绿树成荫的地方，一块刻着“革命烈士永垂不朽”的长方形石碑立在其中，其背后的山岩下矗立着题写有“林青同志就义处”的一方石刻，显得庄严肃穆。每逢清明时节，都有政府机关、企事业单位人员以及普通市民自发前来献花祭扫，以缅怀革命先烈林青同志。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/人物" style=color:#ff7d73>
+                人物
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/林青：愿将满腔热血 换来幸福人间/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/26/贵州深耕红色文化打造红火产业/">
+        <h2>
+            贵州：深耕红色文化 打造“红火产业”
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色经济
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>“围绕推进长征国家文化公园建设，加强贵州红色文化资源保护传承弘扬，实施中国工农红军长征纪念馆等重大项目，打造一批红色旅游精品线路。”2022年春节前夕，国务院印发的《关于支持贵州在新时代西部大开发上闯新路的意见》（国发〔2022〕2号）为贵州红色旅游的发展指明了方向。</p>
+<p>红军长征，在贵州活动时间最长、活动范围最广，留下了大量宝贵精神财富。立足资源禀赋，贵州正深入挖掘红色文化资源，全力建好长征国家文化公园，奋力打造一批红色旅游精品线路，切实推动红色资源转变为“红火产业”。<br><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/641.png"></p>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/经济" style=color:#1bccbc>
+                经济
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/旅游" style=color:#879cff>
+                旅游
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/贵州深耕红色文化打造红火产业/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/26/十年红色旅游贵州红色经济方兴未艾/">
+        <h2>
+            十年红色旅游 贵州“红色经济”方兴未艾
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色经济
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/640.jpg"><br>“以前住的是破旧的老房子，村里都是泥土路，晴天一身灰、雨天一身泥。现在出门是高速，进村不脏鞋。你再看我家房子，好漂亮。天冷了人少些，夏天很多人都来我们这里玩。”贵州遵义枫香镇苟坝村村民张之国用简单朴实的话语，向访客讲述自己生活的变化。</p>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/经济" style=color:#00bcd4>
+                经济
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/旅游" style=color:#00bcd4>
+                旅游
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/十年红色旅游贵州红色经济方兴未艾/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/25/中国缩影·贵州这十年”主题新闻发布会遵义专场举行/">
+        <h2>
+            中国缩影·贵州这十年”主题新闻发布会遵义专场举行
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色文化">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色文化
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/25
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>8月19日，“中国缩影·贵州这十年”主题新闻发布会遵义专场在贵阳举行。省委常委、遵义市委书记李睿作了题为“新时代铸就老区辉煌，新征程讲好遵义故事”的主发布并回答记者提问，市委副书记、市长黄伟，副市长李勰回答有关提问，省委宣传部副部长、省政府新闻办主任何云江主持发布会。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/红色文化" style=color:#ff7d73>
+                红色文化
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/25/中国缩影·贵州这十年”主题新闻发布会遵义专场举行/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+
+             
+<div class="page-current">
+
+    <div class="prev">
+        
+        <a href="/">
+            <span class="page-num">
+                <a-icon type="caret-left" theme="filled" />
+            </span>
+        </a>
+        
+    </div>
+
+    <div class="page-index">
+
+        
+        <span>
+
+            
+
+            
+            <a href="/">
+                <span class="page-num">
+                    1
+                </span>
+            </a>
+        </span>
+        
+
+        <span class="current">
+            2
+        </span>
+
+        
+
+    </div>
+
+    <div class="next">
+        
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="images/avatar3.jpg " alt="头像">
+        </div>
+        <div class="name">
+            你说的队
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                旧说天下山
+            </div>
+            
+            <div class="description">
+                半在黔中青
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/HiW666?tab=projects">
+
+                    
+                    <a-icon type="github"
+                        theme="filled" />
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/">
+
+                    
+                    <a-icon type="twitter"
+                        theme="" />
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://www.guizhou.gov.cn/">
+                    贵州人民政府官网
+                </a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://whhly.guizhou.gov.cn/">
+                    贵州文化和旅游厅
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 毕节革命女性先锋：熊蕴竹</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>毕节革命女性先锋：熊蕴竹 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                红色人物
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/人物" style=color:#ffa2c4>
+                    人物
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>她13岁联络妇女走上街头参加抗日救亡宣传，为前线抗战将士募捐；<br>她冲破封建礼教对妇女的束缚，与男青年同台演进步话剧；<br>她曾是“毕节草原艺术研究社”的骨干成员；曾随中共党支部领导人林青等人从事革命活动，和秦天真一同前往延安。<br>从抗战到解放战争，从领导群众革命到参与新中国的建设，她为中华民族革命事业四处奔走，为祖国的解放事业奉献青春年华。<br>她就是毕节妇女解放运动的带头人——熊蕴竹。<br>熊蕴竹原名熊开梅，1918年出生在毕节城关威宁街一个商贩家庭。这是一个不平凡的女子，无论是她名字中的“竹”还是“梅”，都是她高尚情操和奋斗人生的生动写照。<br> <img src="/img/2/7.jpg"><br>  <span id="more"></span><br> 在熊蕴竹很小的时候，父亲便离开了人世，母亲拉扯着她长大，苦难的生活磨砺了她坚强的意志，也使她初步认识到了人剥削人、人压迫人制度的黑暗。<br>　1931年“九一八”事变爆发，抗日救亡的大潮席卷全国。在这国破家亡的时刻，年仅13岁的熊蕴竹也走上了毕节街头，参加到抗日救亡宣传的队伍中，为前线抗日将士募捐。<br>上个世纪30年代初，毕节没有女子中学，小学毕业的女生无法在当地升学；而地方上要办独立女子中学并非易事。这时，在省城求学、接受了革命思想的毕节籍青年秦天真回乡从教，他积极呼吁冲破封建礼教的束缚男女合校读书，得到许多女学生的拥护和家长、社会开明人士的支持。具有进步思想的开明人士李仲群创办了毕节第一所中学即县立初级中学，他聘请了已在毕节小学任教员的秦天真兼课任教。1933年春，在李仲群的支持下，秦天真在毕节县立初级中学隔壁的吴家祠堂，开办了一个招收男女生的中学班，第一批入学读书的女生有十几个，其中就有熊蕴竹。据秦天真在其著作《风雨八十年》中回忆：她是第一个报名进入男女生合校中学班的学生；是第一个带头剪去长发的女性；也是最先大无畏地勇敢站出来投身抗日救亡运动的女性。<br> <img src="/img/2/8.jpg"><br> 1950年初，熊蕴竹任贵州省妇联筹备处主任，为开创贵州妇女工作新局面做出了卓越贡献。而正当熊蕴竹为全省的妇女解放事业全力工作时，她被调离了省妇联筹备委员会主任的岗位。据1951年元月至1956年底在贵阳市人民政府办公厅工作、担任秦天真（时任贵阳市委书记兼市长）秘书的朱崇演回忆，秦天真市长（贵阳干部都这样称呼）的伴侣熊蕴竹工作很忙，虽然她是30年代参加地下斗争、后又去革命圣地延安的“老革命”，但待人和蔼可亲、没有架子，让人充满敬意。朱崇演回忆，后来意外知道熊蕴竹被撤职，调到省工业厅当处长。隐约知道原因是熊蕴竹自己已经生育三个孩子，为了集中精力更好地为党工作，她去做了节育手术。可当时全国都学习苏联的“英雄母亲”，孩子生得越多越好，因此被认为她不再适合担任省妇联的领导，而对她的岗位进行了调整。当计划生育成为基本国策之后，熊蕴竹的智慧、远见和人格的独立更加让人敬佩。<br>1966年，在“文化大革命”中，秦天真同志受到不公正待遇，被拘留审查。据曹健飞回忆，解放以后曹健飞在北京工作，熊蕴竹每次出差到北京都去看他，仍然像过去那样关心他的工作和思想。1966年冬天的一个夜晚，当时担任贵州省轻工厅副厅长的熊蕴竹突然来到曹健飞家，她告诉曹健飞此行是冒着极大的风险来找周总理，为她爱人秦天真的冤案进行申诉的，因周总理是了解秦天真的，立即打电话要求贵阳造反派放人，不料造反派对周总理指示不仅不理，还变本加厉把秦天真投进监狱。熊蕴竹回到贵阳后，失去了自由，1968年6月被迫害致死，年仅50岁。<br>粉碎“四人帮”以后，熊蕴竹得到平反昭雪。1979年2月20日，贵州省革委会、省委组织部、省轻工厅为熊蕴竹举行隆重的追悼会，贵阳市人民会场里里外外放满了花圈。“熊蕴竹同志一贯热爱党，热爱毛主席。30多年来，在党中央、毛主席的领导下，努力学习马列主义、毛泽东思想，忠心耿耿、艰苦奋斗，团结同志、平易近人，光明磊落、坚持斗争、敢于斗争，坚持党的原则，实事求是、勤勤恳恳、埋头苦干，保持了党的优良传统和作风。在国内革命战争时期，在国民党反动统治下，她在贵阳、安顺、凯里、炉山、毕节等地坚持党的地下工作，对当时的学生运动和妇女工作都做出了积极的贡献。<br> <img src="/img/2/9.jpg"><br> 在抗日战争和解放战争时期，立场坚定、英勇奋斗，不怕困难、不怕牺牲，为中国人民的解放事业尽到了自己的责任。在社会主义革命和社会主义建设中，积极为党工作，完成了党交给的任务，做出了显著成绩。熊蕴竹同志是我党的好党员、好干部。熊蕴竹同志的一生是革命的一生、战斗的一生。”这悼词字字句句饱含深情，是党组织对优秀女儿熊蕴竹短暂而光辉的一生作出的客观公正的评价。在熊蕴竹去世后，她的亲人、战友秦天真一直把她的照片挂在卧室里，每天都要和她说说话，让她知道伟大祖国日新月异的变化。这悄悄话一说就是数十年，直到1998年秦天真去世。<br>熊蕴竹——这位党的优秀女儿，这位有着竹梅情操的伟大战士用生命践行了自己的入党誓词，把初心写在了血雨腥风的斗争中，写在了建设伟大祖国的征程上！
+ </p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

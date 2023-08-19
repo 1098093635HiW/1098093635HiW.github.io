@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 发现无限可能</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    <div id="home-head" style=background-image:url('home.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>黔贵青林</h1>
+                <h3>发现无限可能</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+
+<div class="post">
+
+    <a href="/2023/08/28/共聚多彩贵州公园省，共建世界旅游目的地！/">
+        <h2>
+            共聚多彩贵州公园省，共建世界旅游目的地！
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色文化">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色文化
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/28
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>春日载阳，有鸣仓庚。600年青岩古镇青瓦白墙，游人如织。游客在“赏礼旅拍”门店前，租借汉服春日游园，或闲聊于黔春社的大礼堂前，等待表演精彩开场。随着旅游市场持续回暖，主题为“共聚多彩贵州公园省 共建世界旅游目的地”的第十七届贵州旅游产业发展大会于今日在此开幕。<br>  <br><img src="/img/2/%E5%9B%BE%E7%89%8734.png"><br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/红色文化" style=color:#ff7d73>
+                红色文化
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/08/28/共聚多彩贵州公园省，共建世界旅游目的地！/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/08/27/馆藏贵州｜讲好贵州红色文化故事/">
+        <h2>
+            馆藏贵州｜讲好贵州红色文化故事
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色足迹">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色足迹
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/27
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>贵州红色文化底蕴深厚，红色文化资源几乎涵盖各革命时期，多为全国爱国主义教育示范基地，并名列“红色贵州·雄关漫漫”，建党百年红色旅游百条精品线路中。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/红色足迹" style=color:#00bcd4>
+                红色足迹
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/08/27/馆藏贵州｜讲好贵州红色文化故事/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/08/27/贵州：红色基因代代传 牢记嘱托开新篇/">
+        <h2>
+            贵州：红色基因代代传 牢记嘱托开新篇
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色足迹">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色足迹
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/27
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>“好花红啊好花红，哪朵向阳哪朵红！”这首布依族民歌《好花红》，唱响在原生态山水与大数据产业交相辉映、融合共美的多彩贵州。<br>　　“贵州取得的成绩，是党的十八大以来党和国家事业大踏步前进的一个缩影。”2017年，习近平总书记参加党的十九大贵州省代表团讨论，总书记的关怀如暖流般滋润着贵州大地。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/红色足迹" style=color:#ffa2c4>
+                红色足迹
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/08/27/贵州：红色基因代代传 牢记嘱托开新篇/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/08/27/追寻红色足迹 传承红色星火/">
+        <h2>
+            追寻红色足迹 传承红色星火
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色足迹">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色足迹
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/27
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>盛夏七月，正值暑期旅游高峰期，红色旅游成为许多人的选择。贵州作为红色文化的沃土，成为游客们热衷前往的旅游目的地之一。</p>
+<p><img src="/img/2/%E5%9B%BE%E7%89%8713.jpg"><br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/红色足迹" style=color:#ff7d73>
+                红色足迹
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/08/27/追寻红色足迹 传承红色星火/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/08/19/讲好贵州红色文化故事/">
+        <h2>
+            
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/19
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2023/08/19/讲好贵州红色文化故事/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/28/十年红色旅游 贵州“红色经济”方兴未艾/">
+        <h2>
+            十年红色旅游 贵州“红色经济”方兴未艾
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                经济
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/28
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p>“以前住的是破旧的老房子，村里都是泥土路，晴天一身灰、雨天一身泥。现在出门是高速，进村不脏鞋。你再看我家房子，好漂亮。天冷了人少些，夏天很多人都来我们这里玩。”贵州遵义枫香镇苟坝村村民张之国用简单朴实的话语，向访客讲述自己生活的变化。<br>1935年3月12日，在这个名为苟坝的小山村中央召开政治局扩大会议，毛泽东进入三人军事指挥小组，从组织上进一步巩固和保证了毛泽东在党和红军的领导地位，使遵义会议提出的“改组党中央领导，特别是军事领导”的任务最终得以圆满完成。近年来，苟坝会议会址已成为贵州省级文物保护单位、贵州省级爱国主义教育基地，苟坝红色文化旅游产业创新区是贵州省100个重点旅游景区之一。<br>如今的苟坝，有以苟坝会议为核心的红色文化广场，经过专业设计的民居，集花海、麦田、青山、绿水为一体的风景，绕村的泊油路纵横交错，干净的公厕，青瓦白墙的黔北民居在青山间错落有致。紧邻苟坝的花茂村里，村里第一户乡村旅馆“红色之家”的主人王治强说：“如今光靠游客带来的收入平均下来我每个月过万。以后游客越来越多，生意肯定会更好。”<br>苟坝这个“毛泽东提着马灯走过的地方”如今已是以红色旅游为核心的现代新农村。2013年，枫香镇城镇居民人均可支配收入达2万元，农村人均纯收入超9000元，全面小康总体实现程度87.37%。从枫香镇苟坝村以红色旅游为核心发家致富，可窥见贵州省10年来发展“红色经济”的一角。　<br>数据显示，2005年至2013年，贵州省接待红色旅游游客7794.79万人次，红色旅游收入526.66亿元。2014年，贵州全年预计接待红色旅游游客1697.5万人次，全年预计红色旅游综合收入139.2亿元。自2004年中办印发《2004—2010年全国红色旅游发展规划纲要》、《2011年—2015年全国红色旅游发展规划纲要》以来，贵州省发展红色旅游取得的经济效益和社会效益突显。　<br>目前，贵州省已初步形成以遵义为核心，结合纳入全国红色旅游精品线和纳入全国红色旅游经典景区名录的重要景区(点)的组合旅游资源，加快发展红色旅游，形成包括贵州北部、西北、西南、西部、东部在内的5条精品品牌的旅游线路。<br>专家指出，贵州在发展红色经济的道路上虽然成绩卓然，但仍有不足，建议建立整合联动机制对旅游项目进行申请立项，将红色旅游项目与多彩贵州的绿色旅游捆绑推荐，延伸旅游产业链，在红色旅游经济发展上突出特色，改变粗放投资，开发产业化、专业化的红色旅游商品，改变红色旅游产业在带动相关产业发展，促进消费，增加就业等旅游综合效益体现不足的缺陷。</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/经济" style=color:#ff7d73>
+                经济
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/28/十年红色旅游 贵州“红色经济”方兴未艾/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/28/透视大踏步前进的“黄金十年/">
+        <h2>
+            透视大踏步前进的“黄金十年
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                经济
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/28
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>在党的二十大即将召开之际，北京展览馆，准备数月的“奋进新时代”主题成就展于9月27日开展，28日上午，约600名在京老同志、老将军参观展览。北展广场上，一座以蓝天白云为背景的高山大桥模型甚是抢眼，这是成就展户外展项的重要组成元素——杭瑞高速贵州北盘江大桥模型。在往西南方向距此2500公里外的贵州，北盘江大桥傲然矗立，它是世界第一高桥，也是外界观察贵州的一扇窗口。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/经济" style=color:#00bcd4>
+                经济
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/28/透视大踏步前进的“黄金十年/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/28/举国同心 合力攻坚/">
+        <h2>
+            举国同心 合力攻坚
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                经济
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/28
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><img src="/img/2/%E5%9B%BE%E7%89%8728.jpg"><br>66个贫困县全部脱贫摘帽，923万贫困人口全部脱贫，192万人搬出大山，减贫人数、易地扶贫搬迁人数均为全国之最——党的十八大以来，在以习近平同志为核心的党中央坚强领导下，贵州作为全国脱贫攻坚战主战场之一，集中各方力量啃下了一个个硬骨头，攻下一个个深贫堡垒，让这里实现了“千年之变”。<br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/经济" style=color:#00bcd4>
+                经济
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/28/举国同心 合力攻坚/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/26/周素园：横跨两个世纪，奋斗一生！/">
+        <h2>
+            周素园：横跨两个世纪，奋斗一生！
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色人物
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>一生横跨两个世纪，经历三个历史时代，参加了两个革命，有人称他为长征途中的“红色秀才”，为救国救民奋斗终身！<br>周素园（1879—1958），贵州省毕节人，著名爱国民主人士。1907年在贵州创办《黔报》，宣传民主思想，同年与张百麟、钟昌祚等人发起成立贵州自治学社，从事革命活动。在辛亥革命时期成为贵州革命党人的文胆智囊，曾被列入清廷贵州巡抚秘密诛杀的黑名单，1911年参与领导了辛亥革命贵州起义。1936年2月底，随红二、红六军团一道离开毕节，参加长征。</p>
+<p><img src="/img/2/%E5%9B%BE%E7%89%8710.png"><br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/人物" style=color:#ff7d73>
+                人物
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/周素园：横跨两个世纪，奋斗一生！/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2023/07/26/毕节革命女性先锋：熊蕴竹/">
+        <h2>
+            毕节革命女性先锋：熊蕴竹
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                红色人物
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>她13岁联络妇女走上街头参加抗日救亡宣传，为前线抗战将士募捐；<br>她冲破封建礼教对妇女的束缚，与男青年同台演进步话剧；<br>她曾是“毕节草原艺术研究社”的骨干成员；曾随中共党支部领导人林青等人从事革命活动，和秦天真一同前往延安。<br>从抗战到解放战争，从领导群众革命到参与新中国的建设，她为中华民族革命事业四处奔走，为祖国的解放事业奉献青春年华。<br>她就是毕节妇女解放运动的带头人——熊蕴竹。<br>熊蕴竹原名熊开梅，1918年出生在毕节城关威宁街一个商贩家庭。这是一个不平凡的女子，无论是她名字中的“竹”还是“梅”，都是她高尚情操和奋斗人生的生动写照。<br> <img src="/img/2/7.jpg"><br>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/人物" style=color:#879cff>
+                人物
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2023/07/26/毕节革命女性先锋：熊蕴竹/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+
+             
+<div class="page-current">
+
+    <div class="prev">
+        
+    </div>
+
+    <div class="page-index">
+
+        
+
+        <span class="current">
+            1
+        </span>
+
+        
+        <span>
+            <a href="/page/2/">
+                <span class="page-num">
+                    2
+                </span>
+            </a>
+            
+
+            
+
+        </span>
+        
+
+    </div>
+
+    <div class="next">
+        
+        <a href="/page/2/ ">
+            <span class="page-num">
+                <a-icon type="caret-right" theme="filled" />
+            </span>
+        </a>
+        
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="images/avatar3.jpg " alt="头像">
+        </div>
+        <div class="name">
+            你说的队
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                旧说天下山
+            </div>
+            
+            <div class="description">
+                半在黔中青
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/HiW666?tab=projects">
+
+                    
+                    <a-icon type="github"
+                        theme="filled" />
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/">
+
+                    
+                    <a-icon type="twitter"
+                        theme="" />
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://www.guizhou.gov.cn/">
+                    贵州人民政府官网
+                </a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://whhly.guizhou.gov.cn/">
+                    贵州文化和旅游厅
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

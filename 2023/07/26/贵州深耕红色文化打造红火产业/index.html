@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 贵州：深耕红色文化 打造“红火产业”</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>贵州：深耕红色文化 打造“红火产业” </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/红色经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                红色经济
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/经济" style=color:#ff7d73>
+                    经济
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/旅游" style=color:#1bccbc>
+                    旅游
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>“围绕推进长征国家文化公园建设，加强贵州红色文化资源保护传承弘扬，实施中国工农红军长征纪念馆等重大项目，打造一批红色旅游精品线路。”2022年春节前夕，国务院印发的《关于支持贵州在新时代西部大开发上闯新路的意见》（国发〔2022〕2号）为贵州红色旅游的发展指明了方向。</p>
+<p>红军长征，在贵州活动时间最长、活动范围最广，留下了大量宝贵精神财富。立足资源禀赋，贵州正深入挖掘红色文化资源，全力建好长征国家文化公园，奋力打造一批红色旅游精品线路，切实推动红色资源转变为“红火产业”。<br><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/641.png"></p>
+<span id="more"></span>
+
+<h2 id="让红色文化焕发光彩"><a href="#让红色文化焕发光彩" class="headerlink" title="让红色文化焕发光彩"></a>让红色文化焕发光彩</h2><p>2月17日，步入兴义市威舍镇发哈村红军临时电台指挥部旧址，斑驳的民居小院内，石头垒砌的房屋、榨油坊、石磨等保存完好的物件，见证了87年前那段风起云涌的岁月。1935年4月23日，贺子珍在一场战斗中，为了保护钟赤兵同志被炸伤，几名红军战士将她抬进余伦启家包扎伤口。余家的屋檐下，成为了红军的临时电台指挥部。</p>
+<p>“贺子珍包扎好伤口，红军就走了，临走时他们还给了我父亲一块银元。”回忆起父辈讲述的那段红色故事，86岁的村民余伦启不由感慨：“在处境那么艰难的情况下，红军依然不占老百姓的便宜，太令人敬佩了。”如今，余伦启成了这段历史的义务讲解员。</p>
+<p>近年来，除了对红军临时电台指挥部旧址这项红色资源的挖掘，兴义市还先后多次组织专家对红军长征路过兴义境内的活动痕迹以及途经或者在威舍战斗时的相关人物、事迹进行核实、审定和考证，让贺子珍保护钟赤兵同志受伤的故事、红军洞的故事等红色文化脉络清晰、有迹可循。</p>
+<p>贵州红色资源丰富，红军长征的足迹遍及贵州60多个县（市、区），留下了2000余处革命遗址和753处不可移动文物。</p>
+<p>为让这些精神财富更好地启迪后人，贵州各地在摸清“红色家底”的基础上，分门别类、建档立卡，让每一处红色资源都有“户口”、有“身份”有“故事”；与此同时，还将分散零落的红色资源连点成线、串珠成链，让红色文化资源在新时代焕发光彩。<br><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/642.png"></p>
+<h2 id="让红色阵地更有魅力"><a href="#让红色阵地更有魅力" class="headerlink" title="让红色阵地更有魅力"></a>让红色阵地更有魅力</h2><p>2月18日，一夜大雪，印江自治县木黄镇木黄村木黄会师纪念碑的步道上，游客依然络绎不绝，寒冷的天气没有打消他们的游览热情。</p>
+<p>“我们将山脚到纪念碑的步道扩宽建平后，游客明显增多了。”印江自治县文化体育广播电视旅游局工作人员魏小松告诉记者，未改建前，前往纪念碑的步道狭窄、陡峭，且坑洼不平。去年11月，县里对该步道进行改造后，这条长约1000米、宽4.5米的步道变得平缓，游客上山的时间比原来节省了一半。</p>
+<p>2019年，木黄会师地被明确为贵州省长征国家文化公园重点建设点，此后印江自治县全力有序推进此项建设。目前，该县已完成木黄会师纪念碑、纪念馆、红三军团政治部和红六军团政治部本体修缮。<br><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/1/640.jpg"></p>
+<p>为更好地建好长征国家文化公园，2019年12月，贵州组建了长征国家文化公园建设工作领导小组，建立起内容建设、规划指导、政策支持、资金保障、数字再现、工程实施六大工作专班。2021年7月1日，正式施行《贵州省长征国家文化公园条例》。</p>
+<p>截至2021年11月，贵州已完成30多个长征文物保护点的保护修缮，此外还将建设28条长征历史步道，完成5个红军长征村项目。</p>
+<h2 id="让红色旅游红火起来"><a href="#让红色旅游红火起来" class="headerlink" title="让红色旅游红火起来"></a>让红色旅游红火起来</h2><p>“正月初八我一开门，就忙得停不下来，来四渡赤水纪念馆的游客很多。”2月18日一大早，习水县土城镇“土城焖鸡店”的老板袁春平，又开始了一天的忙碌。<br><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/643.png"><br>28岁的袁春平是土生土长的土城镇人，父母一直在当地从事餐饮行业，不过过去生意一般，仅够养活一家人。得益于土城镇红色旅游的发展，2012年开始，袁春平家焖鸡店的生意开始红火。几年后，他和妻子接替了父母的工作，如今一个月至少2万元的收入让他们一家的生活平静而幸福。</p>
+<p>2012年，习水县成立土城红色旅游文化创新区，统筹整合土城区域内的红色文化资源，大力发展红色旅游。该县以长征国家文化公园（习水段）建设为契机，推进习水红色文化“研学旅”深度融合，充分利用四渡赤水培训学院和四渡赤水革命研究中心这2家当地的红色教育培训机构，开展现场教学、情景教学、拓展教学等课程研究与开发工作，着力打造中国土城“红培之都”知名度。同时，该县还持续提升习水红色旅游业态，打造土城镇青杠坡村、隆兴镇淋滩村、程寨镇石门村、良村镇后滩村4个全省红色旅游示范村。<br><img src="/img/%E7%BA%A2%E8%89%B2%E7%BB%8F%E6%B5%8E/640.png"></p>
+<p>将红色文化融入旅游，既是为了纪念先烈，也是为了富民一方。</p>
+<p>为助力红色旅游发展，2021年，贵州启动红色旅游年，开展百名讲解员宣讲百年党史、重走长征路研培体验等系列活动，同时发布12条红色旅游精品线路，力求让“红色基因”真正变成可持续的“发展基因”。</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

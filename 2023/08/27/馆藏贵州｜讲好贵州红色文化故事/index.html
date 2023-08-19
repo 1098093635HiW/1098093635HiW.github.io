@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 馆藏贵州｜讲好贵州红色文化故事</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>馆藏贵州｜讲好贵州红色文化故事 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/8/27
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/红色足迹">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                红色足迹
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/红色足迹" style=color:#1bccbc>
+                    红色足迹
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>贵州红色文化底蕴深厚，红色文化资源几乎涵盖各革命时期，多为全国爱国主义教育示范基地，并名列“红色贵州·雄关漫漫”，建党百年红色旅游百条精品线路中。<br>  <span id="more"></span><br>贵州的红色资源可分为重要会议旧址类，如遵义会议会址、黎平会议会址、苟坝会议会址等；重要机构旧址类，如川滇黔省革命委员会旧址、中共贵州省工委旧址等；重要人物故居旧址类，如邓恩铭故居、王若飞故居等；战役战斗类，如娄山关战斗遗址、青杠坡战斗遗址等；革命宣传物类，如标语、传单等；新修场馆类，如遵义会议陈列馆、四渡赤水纪念馆、黎平会议纪念馆、息烽集中营革命历史纪念馆等；烈士纪念建筑设施类，如遵义红军烈士陵园等。<br>贵州的红色文化是弘扬伟大建党精神、长征精神、遵义会议精神等，开展爱国主义、革命传统教育，激励广大党员干部群众以更加昂扬的姿态奋力开启全面建设社会主义现代化国家的新征程之独特资源。</p>
+<p><img src="/img/2/%E5%9B%BE%E7%89%8719.png"><br>旅游是文化性的经济活动，是经济性的文化活动。红色文化具有历史、政治、经济、教育等多重价值，红色旅游助推了革命老区经济社会发展，助力脱贫攻坚和乡村振兴。二者协同发展，相得益彰。<br>在旅游产业化战略引领下，贵州旅游强省建设步伐正在加快。不断做精内容、做优质量、做强品牌，助推贵州旅游业高质量发展。<br>在《中国共产党简史》中，毛泽东长征一年参加会议只写了5次（其余不提“会议”）：黎平会议、遵义会议、两河口会议、俄界会议、榜罗镇会议。在红军长征入黔第一城召开的黎平会议，是第一次中央政治局会议。既首次调整长征落脚点，又开始独立自主地解决军事路线问题，为遵义会议实现伟大的历史转折奠定了重要基础，成为伟大历史转折的起点！我深感责任重大，必须要守土尽责。所以，潜心研究长征史，集教师、专家、宣讲员于一身。2015年6月16日，习近平总书记在参观遵义会议陈列馆后对负责讲解的我说：“你讲得很好。要给大家好好讲，告诉大家我们党是怎么走过来的。”总书记的随和与关怀，令我感动不已，这句话将成为鞭策我一生努力工作的动力。<br>其实，我对红色文化的研究，可追溯到1984年对黎平会议会址的考察和撰文。1987年，关于黎平会议的毕业论文获“优秀”等级。至今，已从事20年的高中历史教学和13年的党史研究宣讲。深入研究，笔耕不辍，已在《文史天地》《党性党风党纪研究》《贵州社会主义学院学报》《中学历史报》《贵州党史》等多家刊物发表百余篇文章。曾接受中央人民广播电台、新华社贵州分社等媒体对长征史的专访。<br>中国共产党的浩瀚百年史，蕴藏着无数先人的智慧与力量。我对贵州红色文化的研究是深情的，也永远充满热情，我要讲好贵州红色文化故事，从过去的沧桑和来之不易中汲取经验、珍惜现在、鼓舞士气，我们在享受前人栽树的同时，也要栽能让后人乘凉的树。</p>
+<h1 id="苟坝会议会址"><a href="#苟坝会议会址" class="headerlink" title="苟坝会议会址"></a>苟坝会议会址</h1><p>苟坝是一块三面高山环绕的坝子，坝子南北长约3公里，东西宽1公里；东北西面山峰林立，其主峰马鬃岭海拔1200余米。苟坝独特的地形非常有利于红军隐蔽，躲避敌机轰炸，为红军驻军提供了便利条件。<br><img src="/img/2/%E5%9B%BE%E7%89%8720.png"><br>苟坝会议会址还保留着原来的黔北民居风格，青瓦片、雕花窗、白粉墙，这些古老的建筑见证着曾经的峥嵘岁月。1935年3月中央红军抵达苟坝，于3月10日起召开会议。<br>苟坝会议是继遵义会议之后举行的一次重要的政治局扩大会议，是遵义会议的延续。会议主要议题是要不要按照红一军团建议，放弃追剿驻扎在仁怀坛厂的国民党周浑元纵队，攻打打鼓新场（今毕节市金沙县县城，距苟坝约五十公里），以拓展川滇黔边根据地基础，对中央红军进行物资补给。<br>苟坝会议会址现是全国爱国主义教育示范基地、全国重点文物保护单位，贵州省首批10个“最美红军村落”、国家AAAA级旅游景区。<br>景区内重要景点有苟坝会议陈列馆、毛泽东住地、毛泽东小道、长五间（周恩来、朱德住地）、红军医院（黑神庙），红军标语馆、中华苏维埃银行、马鬃岭红九军团司令部驻地等。</p>
+<h2 id="地址：贵州省遵义市播州区枫香镇苟坝村马鬃岭山脚"><a href="#地址：贵州省遵义市播州区枫香镇苟坝村马鬃岭山脚" class="headerlink" title="地址：贵州省遵义市播州区枫香镇苟坝村马鬃岭山脚"></a>地址：贵州省遵义市播州区枫香镇苟坝村马鬃岭山脚</h2><p><img src="/img/2/%E5%9B%BE%E7%89%8721.png"></p>
+<h1 id="黎平会议会址"><a href="#黎平会议会址" class="headerlink" title="黎平会议会址"></a>黎平会议会址</h1><p>黎平会议会址是全国重点文物保护单位，即野战军总司令部（野司）驻地，位于贵州黎平古城翘街（中国历史文化名街）。清嘉庆二年（1797年）始建，占地面积787平方米，为仿徽派建筑，封火墙围合院落，内为两层木构建筑，呈“一店二居三后院”状。第一进为店铺、储物间（警卫员住室）等，大门门匾上有老一辈革命家陈云的手迹——“黎平会议会址”，临街写有“绸缎布疋”等商用广告语。第二进有黎平会议会议室、周恩来办公室兼住室、朱德办公室兼住室、军委总司令部一局办公室等。1956年，黎平县人民政府将黎平会议会址收归国有；1984年12月18日（黎平会议召开50周年），正式对外开放；2008年3月，实行免费开放。</p>
+<h2 id="地址：贵州省黎平县城德凤镇二郎坡52号"><a href="#地址：贵州省黎平县城德凤镇二郎坡52号" class="headerlink" title="地址：贵州省黎平县城德凤镇二郎坡52号"></a>地址：贵州省黎平县城德凤镇二郎坡52号</h2><h1 id="黎平会议纪念馆"><a href="#黎平会议纪念馆" class="headerlink" title="黎平会议纪念馆"></a>黎平会议纪念馆</h1><p>中央办公厅于2009年批建的黎平会议纪念馆，同年底对外免费开放。从此，黎平会议会址作原状陈列，黎平会议纪念馆作辅助陈列，各司其职。场馆为仿徽派建筑，分为上、下两层，上层主要用作展区（含序厅、主展厅、尾厅、临时展厅），陈展面积约有2000平方米；下层部分是办公室、宣讲厅、管理用房，部分为临街商铺等。采用声光电等现代手法，主要陈展两江之间——血战湘江后到强渡乌江前这一个月的史实，重点陈展“三个第一次”——长征首次政治局会议（黎平会议）、首次调整长征落脚点（不去湘西去黔北）、长征首次大整编（黎平整编）。2017年11月—2018年8月10日，对纪念馆进行改陈提升。<br><img src="/img/2/%E5%9B%BE%E7%89%8722.png"><br>021年，国家发布“建党百年红色旅游百条精品线路”，黎平会议会址列入“红色贵州·雄关漫漫”精品线路。黎平烈士陵园成为全国重点烈士纪念建筑物保护单位。“黎平会议核心展示园”是长征国家文化公园贵州重点建设的16个核心展示园之一，“洪州—黎平城—隆里”是重点建设的11条集中展示带之一。</p>
+<h2 id="地址：瓮安县猴场会议会址"><a href="#地址：瓮安县猴场会议会址" class="headerlink" title="地址：瓮安县猴场会议会址"></a>地址：瓮安县猴场会议会址</h2><p>猴场会议会址是全国爱国主义教育示范基地，贵州省国防教育基地。主要开展爱国主义教育、国防教育。承担文物保护和红军长征历史展陈及学术研究、交流。猴场会议是红军入黔后，政治局在黎平会议之后，遵义会议之前召开的一次重要会议。<br><img src="/img/2/%E5%9B%BE%E7%89%8723.png"><br><img src="/img/2/%E5%9B%BE%E7%89%8724.png"><br><img src="/img/2/%E5%9B%BE%E7%89%8725.png"><br>猴场会议遗址，原为宋氏住宅，建于民国元年(1912年)。四周用青砖砌成墙，高约7米，内有正厅5间，厢房、下厅齐全，石嵌天井，为标准的四合院，俗称“一颗印”房子。墙左侧有碉堡、马房、正厅后面有花园，桶墙右侧竹林掩映，后山古木参天。民国37年(1948年)，宋氏因产业纠葛将“一颗印”房子撤散变卖，屋基改作耕地，今仅有残砖碎瓦散存土中。2009年，猴场会议会址被中宣部列入第四批全国爱国主义教育示范基地。2019年10月，被国务院公布为第八批全国重点文物保护单位。</p>
+<h2 id="地址：贵州省黔南州猴场镇下司社区宋家湾"><a href="#地址：贵州省黔南州猴场镇下司社区宋家湾" class="headerlink" title="地址：贵州省黔南州猴场镇下司社区宋家湾"></a>地址：贵州省黔南州猴场镇下司社区宋家湾</h2>
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

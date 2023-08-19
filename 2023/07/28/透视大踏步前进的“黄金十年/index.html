@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 透视大踏步前进的“黄金十年</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>透视大踏步前进的“黄金十年 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/28
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/经济">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                经济
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/经济" style=color:#ff7d73>
+                    经济
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>在党的二十大即将召开之际，北京展览馆，准备数月的“奋进新时代”主题成就展于9月27日开展，28日上午，约600名在京老同志、老将军参观展览。北展广场上，一座以蓝天白云为背景的高山大桥模型甚是抢眼，这是成就展户外展项的重要组成元素——杭瑞高速贵州北盘江大桥模型。在往西南方向距此2500公里外的贵州，北盘江大桥傲然矗立，它是世界第一高桥，也是外界观察贵州的一扇窗口。<br> <span id="more"></span><br>　　一图胜千言，一展观十年。为高品质呈现好大踏步前进的“黄金十年”，贵州高度重视成就展筹备展出各项工作，省委、省政府主要领导同志第一时间对筹展工作作出重要指示，省委有关领导同志全程统筹，省委宣传部会同省发展改革委牵头成立“奋进新时代”主题成就展贵州展区筹展工作领导小组，组织相关省直单位负责人和省内专家学者共同参与，统筹利用贵州日报报刊社、贵州日报当代融媒体集团等单位展陈展览资源和力量，高质量推进本次展览工作。<br>　　“以一域之出新出彩为全局增光添彩。”贵州展区筹展工作领导小组负责人说，贵州展区及融入中央综合展区的贵州元素，全面展示了贵州在党的十八大以来深入践行习近平新时代中国特色社会主义思想所取得重大成就，把贵州十年发展中最具代表性和影响力的大事、要事浓墨重彩展示出来。<br>　　聚焦贵州围绕“四新”主攻“四化”<br>　　2021年农历春节前夕，毕节化屋村，习近平总书记与当地少数民族同胞在一起；2015年5月，遵义花茂村，习近平总书记与当地干部群众热情握手。习近平总书记与贵州干部群众在一起的这两张照片，出现在北京展览馆5号馆的贵州展区最突出位置。<br>　　200平方米的贵州展区，以习近平总书记对贵州工作的重要指示精神为主线，紧扣围绕“四新”主攻“四化”主战略和“四区一高地”主定位进行布局编排，多角度、多层次对“在新时代西部大开发上闯新路、在乡村振兴上开新局、在实施数字经济战略上抢新机、在生态文明建设上出新绩”进行了精彩纷呈的影像化呈现，全面展现了党的十八大以来贵州翻天覆地的变化。<br>　　据贵州展区筹展工作领导小组负责人介绍，经广泛联络、精心筛选，贵州展区最终确定了最具影响力、最具代表性的50余张各领域精美照片和30余件实物、模型，采用前沿展陈理念和展览技术，分五个版块，力图为观展者展示一个充满生机活力、持续大踏步前进的“贵州十年”。<br>　　“赶超跨越 西部开发闯新路”版块，重点展现以交通建设、科技创新、新型工业化为引领的经济发展情况；“千年圆梦 乡村振兴开新局”版块，重点展现以农村产业、农村交通、易地扶贫搬迁、“两不愁三保障”等方面的代表性成就；“蓝海劈波 数字经济抢新机”版块，主要体现贵州在大数据和数字经济领域的实践与成就；“厚植优势 生态文明出新绩”版块，展现优良生态环境这个贵州最大的发展优势和竞争优势。<br>　　新国发2号文件明确“四区一高地”战略定位，是对习近平总书记视察贵州重要讲话精神的项目化、政策化、具体化落实。“贵州展区”的第五版块即以“团结奋进 建设‘四区一高地’”为主题，突出遵义会议精神的引领作用，重点呈现新国发2号文件的核心内容和具有典型意义的实践场景。<br>　　在贵州展区，除了可以通过丰富的图片了解多彩贵州，观众还可通过观摩精美绚丽的苗绣作品与《贵州文库》，感受多姿多彩的民族文化、历史文化，贵州茶叶、正安吉他、“贵州造”极地车等实物及模型展品，也向观众展示了贵州经济社会大踏步前进不同领域的典型成就。《奋进缩影 贵州新路》《阅尽千山 开启无限》《走遍大地神州 醉美多彩贵州》等视频内容，则让观众能在展区方寸之地尽览贵州人文山水。<br>　　“看天”“看地”“看人”“看现在”<br>　　国之重器“中国天眼”在整个展览中多次出现，但最为吸睛的是“贵州展区”的“天眼观苍穹”互动展项。“天眼观苍穹”通过触摸屏、“天眼”实景沙盘、LED高清屏形式，以“太空”视觉俯瞰地球、飞越贵州，以“天眼”视觉仰望星空、漫游宇宙，最后回到贵州、展望未来。<br>　　设计团队多次与中科院相关机构沟通，清晰梳理了南仁东团队从“中国天眼”选址到建设投用的奋斗故事，介绍了“中国天眼”最新的科研成果。观众还能戴上耳机，聆听经过技术处理的来自宇宙深处的脉冲星声音。<br>　　贵州展区筹展工作领导小组邀请的国内一流视觉设计和制作团队，对“天眼观苍穹”和“影像贵州”特色展项进行了多轮修改优化，力争让贵州给观众留下深刻印象。在“影像贵州”特色展项中，执行团队选用近200幅照片，对多彩贵州进行了全方位的影像化表达，最终以“看地”“看人”“看现在”三部分内容，为观众呈现了一个蓬勃发展、多姿多彩的美丽贵州。<br>　　“看地·自然生态之美”——优良生态环境已经成为贵州最大的发展优势和竞争优势，绿水青山就是金山银山的理念在贵州大地得到深入践行。铜仁梵净山、黔南荔波樟江、遵义赤水丹霞、黔东南施秉云台山，这是贵州数量傲居全国之首的四个世界自然遗产地；黄果树、百里杜鹃、红枫湖、万峰林、阿西里西大草原……这些代表了贵州优良生态环境和自然美景的景区景点，都在这一篇章中有精彩亮相。<br>　　“看人·历史人文之美”——从遵义会议会址、黎平会议会址等红色文化，再到联合国教科文组织人类非物质文化遗产侗族大歌等民族文化；从海龙囤、盘县大洞遗址等贵州大地上的“中国百年百大考古发现”“中国年度十大考古新发现”等史前文化，到阳明文化、屯堡文化、沙滩文化等优秀历史文化，再到三都水书、布依族八音坐唱等国家级非物质文化遗产，让观众直观感受到一个文化底蕴厚重的贵州。<br>　　“看现在·发展变化之美”——影像中，世界第一高桥北盘江大桥和世界第一混凝土高塔桥平塘特大桥的雄姿，可让观众体味到“世界高桥，半在黔中”的气魄。洪家渡水电站、构皮滩水电站等西电东送枢纽工程，国家算力枢纽节点贵安新区数据中心、贵阳贵安华为云数据中心、腾讯贵安七星数据中心等数字经济“火车头”，让观众感受到一个现代化气息浓厚的新贵州。<br>　　贵州元素融入全国“一盘棋”<br>　　贵州是全国8个国家算力枢纽节点之一，而贵安新区是重点打造的10个国家数据中心集群之一。在名为“经济建设奋楫扬帆 谱写高质量发展新篇章”的“中央综合展区”第一单元中，中国联通贵安云数据中心得到重点展示。<br>　　在整个展览的图片、影像和实物、模型展示中，中央综合展区共使用贵州元素、影像和实物50余个，其中有经济高质量发展的标志性重大项目、脱贫攻坚、交通基础设施、重大战略部署以及党的建设、社会民生发展的生动镜头。观众可通过这些生动影像和实物展示，在全国“一盘棋”格局中观察“贵州十年”发展成就。<br>　　在“全面推进社会建设 不断满足人民美好生活向往”单元，融入了化屋村公路、患者办理跨省异地就医费用即时结算以及贵州省党政主要领导同志脱贫攻坚责任书等图片和实物。在“全面从严治党 保持党的生机活力”单元，采用多幅照片呈现贵州抓党建促脱贫攻坚、纪检监察干部下沉到村寨深挖问题线索的工作瞬间，惠水县面向全球直播县委常委会会议的场景也在相关展区得到展示。<br>　　“八一勋章”获得者杜富国，“时代楷模”文朝荣、刘芳、杜富国、陈立群、南仁东以及全国脱贫攻坚先进个人邓迎香、最美退役军人张林昌等人物群像在中央综合展区的不同单元中纷纷亮相。<br>　　独山县下司镇下司村脱贫攻坚尖刀排队旗、印江土家族苗族自治县驻村干部的“诗意请假条”、“时代楷模”陈立群的学生考入大学后给他写的感谢信等实物展品，记录着贵州脱贫攻坚的奋战岁月，透露着贵州人不向命运低头、团结一心奋勇争先的精气神。<br>　　“国家背景和区域特色深度融合、宏大叙事与生动细节深度融合、趣味性观赏与沉浸式体验深度融合，是贵州展区及本次展览贵州元素的三大特色。”贵州展区筹展工作领导小组负责人说，展区所选择的图片以及布置的体验式项目，可让观众更直观地认识贵州的巨大发展成就和人民幸福生活。</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

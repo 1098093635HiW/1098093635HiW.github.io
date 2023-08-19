@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黔贵青林 || 周素园：横跨两个世纪，奋斗一生！</title>
+    <meta name="author" content="你说的队">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar3.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">黔贵青林</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于我们</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>历史档案</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>必应</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>黔贵青林</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于我们</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">历史档案</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="http://cn.bing.com/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">必应</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>周素园：横跨两个世纪，奋斗一生！ </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/7/26
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/红色人物">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                红色人物
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/人物" style=color:#00bcd4>
+                    人物
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>一生横跨两个世纪，经历三个历史时代，参加了两个革命，有人称他为长征途中的“红色秀才”，为救国救民奋斗终身！<br>周素园（1879—1958），贵州省毕节人，著名爱国民主人士。1907年在贵州创办《黔报》，宣传民主思想，同年与张百麟、钟昌祚等人发起成立贵州自治学社，从事革命活动。在辛亥革命时期成为贵州革命党人的文胆智囊，曾被列入清廷贵州巡抚秘密诛杀的黑名单，1911年参与领导了辛亥革命贵州起义。1936年2月底，随红二、红六军团一道离开毕节，参加长征。</p>
+<p><img src="/img/2/%E5%9B%BE%E7%89%8710.png"><br>  <span id="more"></span><br>  在红二、红六军团长征的队伍里，年龄最长的，是57岁的周素园。他是一位前清贡生，在贵州参与了辛亥革命，他在黑暗中前行，只为寻找到救国救民的光明！毛泽东称他为“我们的一个十分亲切而又可敬的朋友与革命的同志”。<br>1936年2月14日，“贵州抗日救国军”在黔西北成立，壮大了革命力量，加速了红军创建黔西北革命根据地的进程，为保存革命火种、成功实现战略转移起到了至关重要的作用。<br>红军在毕节等地创建革命根据地，近一个月的时间里，在周素园的影响下，大批毕节的开明民主人士也表示支持红军，5000多青年踊跃报名参加红军。周素园还利用旧日的关系，分别向云贵川三省的军阀写信，劝说他们不要进攻红军而保持中立，以免中了蒋介石“一石二鸟”之计。<br>1936年2月底，红二、红六军团撤离毕节。任弼时、贺龙、萧克、王震等领导人考虑到周素园的安全和身体情况，表示愿意出些钱让他去香港暂避，并做一些抗日统一战线的工作。周素园却坚决表示要追寻光明，跟随红军长征，为中国革命作力所能及的贡献。红二、红六军团领导纷纷为之动容，决定带着周素园一起长征。<br><img src="/img/2/%E5%9B%BE%E7%89%8711.png"><br>从此，周素园便穿着长衫，行进在漫漫长征途中。尽管年事已高，在长征期间屡屡生病，但他还是咬牙挺过了七个月，随军到达陕北，在陕北保安，受到毛泽东、周恩来的多次接见。<br>到达延安后，周素园除了担任红军教员外，还主动担当起做国民党上层人士统战工作的责任。为了促成西安事变的和平解决和抗日民族统一战线的形成，周素园先后给何应钦、张学良、吴忠信等数十人写信，希望他们以民族利益为重，联共抗日。<br>在延安，周素园一直患病不愈，当地治疗条件又很差。他自感年近六旬，于是写了一封信给毛泽东，表示不想再拖累组织，想回毕节老家。毛泽东同意这一要求，并嘱咐他到西南继续开展统战工作。毛泽东说：“你虽然不是一个共产党员，但却是一个红军。先生是一个奋斗的人，是我们党最亲密的朋友。”<br><img src="/img/2/%E5%9B%BE%E7%89%8712.png"><br>周素园离开延安后，奔走于重庆、成都、昆明、贵阳等地，团结抗日力量。他广泛接触社会各界人士，宣传共产党的抗战主张和八路军英勇杀敌的事迹，并动员一批知识青年奔赴延安，还募集资金购买两万盒云南白药并邮寄到西安八路军办事处，支援抗日前线。<br>1949年11月，贵州解放前夕，周素园在毕节组织支前委员会，并写信争取到国民党军政人员的起义、投诚，为解放军解放贵州、建设人民政权作出积极贡献，他还积极组织群众支援解放军进军四川和肃清敌特土匪，建立人民政权。周素园先后担任西南军政委员会委员，贵州省人民政府副主席、副省长，全国政协委员，第一届全国人民代表大会代表。1958年，周素园因病逝世，享年79岁。<br>周素园一生，以追求救国救民真理为己任，从不以权谋私。作为毕节历史名人，他的一生都彰显出执着信念的人格魅力，是我们学习的榜样。他一生为国为民的革命情怀，永远值得后人所铭记！
+ </p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023 - 2023 黔贵青林
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @你说的队
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/">github</a> & <a
+                target="_blank" rel="noopener" href="https://bnging.com/">Binging</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>
